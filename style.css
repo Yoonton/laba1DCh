@@ -1,0 +1,33 @@
+body{
+    background-color: bisque;
+}
+h1{
+    font-size: 70px;
+    color: brown;
+    margin: 30px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.content-left{
+    background-color: burlywood;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 320px;
+}
+.content-right{
+    background-color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.content{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+img{
+    width: 320px;
+}
