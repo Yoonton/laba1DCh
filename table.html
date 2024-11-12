@@ -12,7 +12,7 @@
           </div>
           <div>
             <caption>Таблица</caption>
-            <table>
+            <table id="Table">
                 <tr>
                     <th>#</th>
                     <th>FirstName</th>
@@ -64,8 +64,9 @@
 
             <label for="userName">User Name:</label>
             <input type="text" id="userName" name="userName" required><br>
+
+            <button type="button" onclick="addRow()">Добавить</button>
           </form>
-          <button type="button" onclick="addRow()">Добавить</button>
 
           <script>
             function addRow(){
@@ -74,14 +75,22 @@
                 const lastName = document.getElementById("lastName").value;
                 const userName = document.getElementById("userName").value;
 
-                const table = document.getElementById("AddRowTable");
+                const table = document.getElementById("Table");
                 const newRow = table.insertRow();
+                const cell1 = newRow.insertCell(0);
+                const cell2 = newRow.insertCell(1);
+                const cell3 = newRow.insertCell(2);
+                const cell4 = newRow.insertCell(3);
 
-                newRow.insertCell(0).innerText = id;
-                newRow.insertCell(1).innerText = firstName;
-                newRow.insertCell(2).innerText = lastName;
-                newRow.insertCell(3).innerText = userName;
-                document.getElementById("AddRowTable").reset();
+                cell1.textContent = id;
+                cell2.textContent = firstName;
+                cell3.textContent = lastName;
+                cell4.textContent = userName;
+
+                document.getElementById("id").value = "";
+                document.getElementById("firstName").value = "";
+                document.getElementById("lastName").value = "";
+                document.getElementById("userName").value = "";
             }
           </script>
     </body>
