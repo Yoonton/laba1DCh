@@ -26,3 +26,6 @@ tr {
 tr:nth-child(even) {
     background-color: rgb(250, 204, 134);
 }
+form{
+    display: flex;
+}

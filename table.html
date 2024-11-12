@@ -51,5 +51,38 @@
                 </tr>
             </table>
           </div>
+          <h2>Добавить строку</h2>
+          <form id="AddRowTable">
+            <label for="id">ID:</label>
+            <input type="number"id="id" name="id" required><br>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br>
+
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName" required><br>
+          </form>
+          <button type="button" onclick="addRow()">Добавить</button>
+
+          <script>
+            function addRow(){
+                const id = document.getElementById("id").value;
+                const firstName = document.getElementById("firstName").value;
+                const lastName = document.getElementById("lastName").value;
+                const userName = document.getElementById("userName").value;
+
+                const table = document.getElementById("AddRowTable");
+                const newRow = table.insertRow();
+
+                newRow.insertCell(0).innerText = id;
+                newRow.insertCell(1).innerText = firstName;
+                newRow.insertCell(2).innerText = lastName;
+                newRow.insertCell(3).innerText = userName;
+                document.getElementById("AddRowTable").reset();
+            }
+          </script>
     </body>
 </html>
